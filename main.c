@@ -39,9 +39,34 @@ int main()
             }
         }
     }
-    for (int i = 0; (i < sizeof(otazky) / sizeof(otazky[0])) && (otazky[i][0] != '\0'); i++) // vypsani radku
+    int body = 0;
+    char spravna_odpoved;
+    char vysledek;
+    int odpovedi = 0;
+    for (int i = 0; (i < sizeof(otazky) / sizeof(otazky[0])) && (otazky[i][0] != '\0'); i++) // vypsani serie
     {
-        printf("%s\n", otazky[i]); // vypsani radku
+        printf("%s\n", otazky[i]); // vypsani otazky
+
+        for (int j = 1; j <= 4; j++) // vypis odpovedi
+        {
+            if (data[j + odpovedi][0] == '!')
+            {
+                printf("%c \n", data[j + odpovedi][1]); // spravne odpovedi
+                spravna_odpoved = data[j + odpovedi][1];
+            }
+            else
+            {
+                printf("%s", data[j + odpovedi]); // spatne odpovedi
+            }
+        }
+        odpovedi += 6;
+        printf("Zadejte odpoved:"); // dostani vysledku
+        scanf("%d", &vysledek);
+        if (spravna_odpoved = vysledek) // porovnani vysledku s odpovedi
+        {
+            printf("ahoj \n");
+            body++;
+        }
     }
 
     return 0;

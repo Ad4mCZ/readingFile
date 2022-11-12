@@ -64,12 +64,9 @@ int main()
         scanf(" %c", &vysledek);
         if (spravna_odpoved == vysledek) // porovnani vysledku s odpovedi
         {
-            printf("ahoj \n");
             body++;
             spravna_odpoved = 0;
         }
-        else
-            continue;
     }
     printf("Mate %d bodu", body);
 

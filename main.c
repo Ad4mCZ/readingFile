@@ -40,8 +40,8 @@ int main()
         }
     }
     int body = 0;
-    char spravna_odpoved;
-    char vysledek;
+    char spravna_odpoved = 0;
+    char vysledek = 0;
     int odpovedi = 0;
     for (int i = 0; (i < sizeof(otazky) / sizeof(otazky[0])) && (otazky[i][0] != '\0'); i++) // vypsani serie
     {
@@ -61,13 +61,17 @@ int main()
         }
         odpovedi += 6;
         printf("Zadejte odpoved:"); // dostani vysledku
-        scanf("%d", &vysledek);
-        if (spravna_odpoved = vysledek) // porovnani vysledku s odpovedi
+        scanf(" %c", &vysledek);
+        if (spravna_odpoved == vysledek) // porovnani vysledku s odpovedi
         {
             printf("ahoj \n");
             body++;
+            spravna_odpoved = 0;
         }
+        else
+            continue;
     }
+    printf("Mate %d bodu", body);
 
     return 0;
 }

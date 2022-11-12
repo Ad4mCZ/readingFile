@@ -43,7 +43,6 @@ int main()
     {
         printf("%s\n", otazky[i]); // vypsani radku
     }
-    printf("random text");
 
     return 0;
 }

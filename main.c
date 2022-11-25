@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAX_LINES 100
 #define MAX_LENGTH 20
+#include "udaje.h"
 
 int main()
 {
@@ -24,6 +25,8 @@ int main()
         }
     }
     fclose(file); // zavreni souboru
+
+    // GetData(); Zeptani se na udaje o uzivateli
 
     for (int i = 0, indexOtazky = 0; i < line; i++) // prochazeni dat
     {
